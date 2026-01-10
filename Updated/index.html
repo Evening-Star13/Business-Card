@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarrTech Solutions | Chris Barranger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 flex items-center justify-center min-h-screen p-4 overflow-hidden">
+
+    <div class="fixed inset-0 z-[-1] bg-slate-950">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/10 rounded-full blur-[120px] animate-pulse"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-600/10 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+
+    <div class="w-[360px] h-[640px] cursor-pointer" id="businessCard">
+        <div class="relative preserve-3d duration-700 w-full h-full shadow-2xl rounded-2xl transition-transform" id="cardInner">
+            
+            <div class="absolute backface-hidden w-full h-full bg-slate-900/90 border border-slate-700 rounded-2xl p-8 flex flex-col items-center justify-between overflow-hidden card-glow backdrop-blur-md">
+                
+                <div class="text-center">
+                    <h1 class="text-2xl font-black bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent tracking-tight">
+                        BarrTech Solutions
+                    </h1>
+                    <div class="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-1 rounded-full"></div>
+                </div>
+
+                <div class="relative">
+                    <div class="w-40 h-40 rounded-full border-2 border-slate-700 overflow-hidden img-glow">
+                        <img src="me.png" alt="Chris Barranger" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -inset-3 border border-blue-500/20 rounded-full animate-pulse"></div>
+                </div>
+
+                <div class="text-center">
+                    <h2 class="text-2xl text-white font-bold tracking-wide">Chris Barranger</h2>
+                    <p class="text-blue-400 font-medium mt-1">Web & Software Developer</p>
+                </div>
+
+                <div class="w-full space-y-2 text-slate-300">
+                    <div class="flex gap-2">
+                        <a href="tel:2892444466" class="contact-link flex-1 flex items-center justify-center gap-2 p-2 rounded-lg bg-slate-800/50 border border-transparent hover:border-purple-500/50 transition-all">
+                            <i class="fas fa-phone text-purple-500 text-sm"></i>
+                            <span class="font-mono text-[11px]">CALL</span>
+                        </a>
+                        <a href="sms:2892444466" class="contact-link flex-1 flex items-center justify-center gap-2 p-2 rounded-lg bg-slate-800/50 border border-transparent hover:border-blue-500/50 transition-all">
+                            <i class="fas fa-comment-dots text-blue-500 text-sm"></i>
+                            <span class="font-mono text-[11px]">TEXT</span>
+                        </a>
+                    </div>
+
+                    <a href="mailto:BarrTechSolutions@consultant.com" class="contact-link flex items-center gap-3 p-2 rounded-lg hover:bg-slate-800 transition-all border border-transparent hover:border-blue-500/50">
+                        <i class="fas fa-envelope text-blue-500 text-sm"></i>
+                        <span class="text-[10px] font-mono truncate">BarrTechSolutions@consultant.com</span>
+                    </a>
+                    
+                    <div class="flex gap-2 mt-1">
+                        <button id="vcardBtn" class="contact-link flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-bold text-[10px] hover:opacity-90 transition-opacity shadow-lg">
+                            <i class="fas fa-user-plus"></i> SAVE CONTACT
+                        </button>
+                        <button id="qrOpenBtn" class="contact-link flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-bold text-[10px] hover:opacity-90 transition-opacity shadow-lg">
+                            <i class="fas fa-qrcode"></i> SCAN QR
+                        </button>
+                    </div>
+                </div>
+                
+                <p class="text-[10px] text-slate-500 uppercase tracking-[0.2em] font-bold">Tap for Tech Stack</p>
+            </div>
+
+            <div class="absolute backface-hidden my-rotate-y-180 w-full h-full bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col items-center card-glow overflow-y-auto">
+                <h3 class="text-white font-bold text-lg mb-4 border-b-2 border-purple-500 pb-2 w-full text-center tracking-widest uppercase">Tech Stack</h3>
+                
+                <div class="grid grid-cols-2 gap-y-3 gap-x-4 w-full text-slate-200">
+                    <div class="flex items-center gap-3 group/icon"><i class="fab fa-python text-blue-400"></i> <span class="text-xs font-semibold">Python</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fab fa-js text-yellow-400"></i> <span class="text-xs font-semibold">JavaScript</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fab fa-php text-indigo-400"></i> <span class="text-xs font-semibold">PHP</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fab fa-laravel text-red-500"></i> <span class="text-xs font-semibold">Laravel</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fab fa-html5 text-orange-500"></i> <span class="text-xs font-semibold">HTML5</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fab fa-css3-alt text-blue-500"></i> <span class="text-xs font-semibold">CSS3</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fas fa-leaf text-green-500"></i> <span class="text-xs font-semibold">Django</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fas fa-database text-blue-300"></i> <span class="text-xs font-semibold">SQL</span></div>
+                    <div class="flex items-center gap-3 group/icon">
+                        <svg class="w-4 h-4 fill-[#336791]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.088 11.234c.041.448.062.896.062 1.344 0 4.14-2.618 7.502-5.842 7.502-.857 0-1.67-.233-2.394-.653-.332-.19-.724-.302-1.127-.302-.591 0-1.134.24-1.52.628-.431.433-.701 1.026-.701 1.684v.001c0 .024.001.049.002.073C6.34 21.056 5 19.186 5 17.067c0-2.483 1.812-4.512 4.125-4.793v-.002c-.001-.005-.001-.011-.001-.016 0-1.898 1.54-3.437 3.438-3.437.288 0 .564.037.828.104.577-1.168 1.832-1.928 3.252-1.928 2.031 0 3.677 1.646 3.677 3.677 0 .357-.051.696-.146 1.018l.001-.001c.219-.168.468-.289.736-.352l.18-.041zM14.212 9.4c-.131-.033-.266-.051-.406-.051-.832 0-1.506.674-1.506 1.506 0 .016.001.031.002.047 1.156.136 2.148.81 2.768 1.74.048-.153.076-.316.076-.486 0-.825-.461-1.543-1.139-1.905l.205-.851z"/></svg>
+                        <span class="text-xs font-semibold">PostgreSQL</span>
+                    </div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fab fa-git-alt text-orange-600"></i> <span class="text-xs font-semibold">Git</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fas fa-server text-green-400"></i> <span class="text-xs font-semibold">MongoDB</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fab fa-react text-cyan-400"></i> <span class="text-xs font-semibold">React</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fas fa-wind text-teal-400"></i> <span class="text-xs font-semibold">Tailwind</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fas fa-code text-blue-600"></i> <span class="text-xs font-semibold">TypeScript</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fab fa-docker text-blue-500"></i> <span class="text-xs font-semibold">Docker</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fas fa-dharmachakra text-blue-600"></i> <span class="text-xs font-semibold">Kubernetes</span></div>
+                    <div class="flex items-center gap-3 group/icon"><i class="fab fa-bootstrap text-purple-600"></i> <span class="text-xs font-semibold text-[10px]">Bootstrap</span></div>
+                </div>
+
+                <div class="mt-auto text-center pt-4">
+                    <p class="text-blue-400 text-[10px] italic">"Building the future, one line at a time."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="qrModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div class="bg-slate-900 border border-slate-700 p-8 rounded-3xl flex flex-col items-center gap-6 shadow-2xl scale-in max-w-[320px] text-center">
+            <h4 class="text-white font-bold text-lg">Scan to Save Contact</h4>
+            <div class="bg-white p-4 rounded-2xl shadow-inner">
+                <img id="qrImage" src="" alt="Contact QR Code" class="w-48 h-48">
+            </div>
+            <p class="text-slate-400 text-xs">Scan this with your camera to add Chris Barranger to your phone.</p>
+            <button id="qrCloseBtn" class="w-full bg-slate-800 text-white py-3 rounded-xl font-bold hover:bg-slate-700 transition-colors border border-slate-600">
+                CLOSE
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
